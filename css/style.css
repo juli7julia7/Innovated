@@ -72,19 +72,20 @@ body {
    opacity: 0.7;
    font-weight: 500;
    line-height: 160%;
-   transition: 1s;
+   transition: 0.400s;
    position: relative;
 }
 
 .menu__link:hover::before{
    content: "";
    position: absolute;
-   width: 100%;
+   width: 135%;
    height: 3px;
    background: #2D74FF;
-   left: 0;
-   bottom: -5px;
+   bottom: -12px;
    border-radius: 2px;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
 
 .menu__link:hover {
