@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:,regular,500&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Gelasio:500,600&display=swap");
 
 body {
    font-family: "Poppins";
@@ -37,11 +38,26 @@ body {
    transition: opacity 0.500s;
 }
 
-.button:hover{
+.button:hover {
    opacity: 0.8;
 }
 
+.subtitle {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 1.5;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
+   color: #2D74FF;
+   opacity: 0.7;
+   margin-bottom: 15px;
+}
 
+.text {
+   font-size: 18px;
+   line-height: 1.5;
+   opacity: 0.7;
+}
 
 /* ==================================== HEADER  ======================================= */
 .header {}
@@ -63,7 +79,9 @@ body {
 
 .menu__list {
    display: flex;
-   gap: 40px;
+   flex-wrap: wrap;
+   column-gap: 40px;
+   row-gap: 10px;
 }
 
 .menu__item {}
@@ -76,7 +94,7 @@ body {
    position: relative;
 }
 
-.menu__link:hover::before{
+.menu__link:hover::before {
    content: "";
    position: absolute;
    width: 135%;
@@ -93,3 +111,161 @@ body {
 }
 
 .header__button {}
+
+@media(max-width:1090px) {
+
+   .header__menu,
+   .header__button {
+      display: none;
+   }
+
+   .header__container {
+      /* min-height: 80px; */
+   }
+}
+
+/* ==================================== HERO ======================================= */
+.hero {}
+
+.hero__container {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+}
+
+.hero__content {}
+
+.hero__subtitle {}
+
+.hero__title {
+   font-family: 'Gelasio';
+   font-weight: 600;
+   font-size: 57px;
+   line-height: 1.1;
+   max-width: 519px;
+   margin-bottom: 44px;
+}
+
+.hero__title span {
+   color: #2D74FF;
+}
+
+.hero__actions {
+   display: flex;
+   align-items: center;
+}
+
+.hero__button {
+   margin-right: 40px;
+}
+
+.button {}
+
+.hero__link a {
+   font-size: 18px;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   opacity: 0.7;
+   padding-top: 2px;
+}
+
+.hero__link {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   position: relative;
+}
+
+.hero__link::after {
+   content: "";
+   position: absolute;
+   width: 53px;
+   height: 53px;
+   background: #2D74FF;
+   opacity: 0.12;
+   border-radius: 50%;
+   transform: scale(1.3);
+   animation: play-circle 1s infinite ease;
+}
+
+@keyframes play-circle {
+   0% {
+      transform: scale(1.3);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(3);
+   }
+}
+
+.hero__link::before {
+   content: url("../img/hero/play.svg");
+
+   /* background: url("../img/hero/play.svg") center no-repeat; */
+   width: 50px;
+   height: 50px;
+}
+
+.hero__decor {}
+
+.hero__img {}
+
+.hero__img img {
+   /* max-width: 537px; */
+   max-width: 750px;
+   height: 500px;
+}
+
+
+
+@media(max-width:1030px) {
+   .hero__img img {
+      max-width: 650px;
+      height: 400px;
+   }
+
+   .subtitle {
+      font-size: 16px;
+      line-height: 1.3;
+      margin-bottom: 12px;
+   }
+
+   .hero__title {
+      font-size: 44px;
+      line-height: 1.1;
+      margin-bottom: 34px;
+   }
+}
+
+@media(max-width:920px) {
+   .hero__img img {
+      max-width: 550px;
+      height: 300px;
+   }
+}
+
+@media(max-width:920px) {
+   .hero__img {
+      display: none;
+   }
+
+   .hero__container {
+      justify-content: flex-start;
+   }
+}
+
+@media(max-width:479.98px) {
+
+   .hero__actions {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .hero__button {
+      flex: 1 1 100%;
+      margin-right: 0;
+      margin-bottom: 15px;
+   }
+}
