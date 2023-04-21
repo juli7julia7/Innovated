@@ -125,7 +125,20 @@ body {
 }
 
 /* ==================================== HERO ======================================= */
-.hero {}
+.hero__container {
+   animation: hero 1s  ease;
+}
+
+
+@keyframes hero {
+   0% {
+      transform: translateY(0);
+   }
+
+   100% {
+      transform: translateY(50px);
+   }
+}
 
 .hero__container {
    display: flex;
