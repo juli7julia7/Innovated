@@ -26,7 +26,6 @@ body {
 }
 
 .button {
-   width: 166px;
    background: #2D74FF;
    border-radius: 5px;
    padding: 15px 30px;
@@ -120,6 +119,10 @@ body {
 }
 
 /* ==================================== HERO ======================================= */
+.hero {
+   padding-top: 58px;
+}
+
 .hero__container {
    animation: hero 1s ease;
 }
@@ -270,4 +273,124 @@ body {
       margin-right: 0;
       margin-bottom: 15px;
    }
+}
+
+
+/* =========================== COMMUNITY ============================== */
+.main__community {
+   padding: 141px 0 140px;
+}
+
+.community {}
+
+.community__container {
+   display: flex;
+   justify-content: space-between;
+   animation: community 1s ease;
+}
+
+@keyframes community {
+   0% {
+      transform: translateY(150px);
+   }
+
+   100% {
+      transform: translateY(0);
+   }
+}
+
+.community__content {}
+
+.community__subtitle {}
+
+
+.community__pretitle {
+   font-family: 'Gelasio';
+   font-weight: 500;
+   font-size: 32px;
+   line-height: 1.4;
+   color: #171832;
+   max-width: 292px;
+   margin-bottom: 25px;
+}
+
+.community__text {
+   margin-bottom: 40px;
+   max-width: 423px;
+}
+
+.community__button {}
+
+.button {}
+
+.community-video__video {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.community-video__video video {
+   max-width: 555px;
+}
+
+
+@media(max-width:1030px) {
+   .main__community {
+      padding: 100px 0 100px;
+   }
+
+   .community-video__video video {
+      max-width: 100%;
+   }
+
+   .community-video__video, .community__content {
+      padding: 0 10px 0;
+   }
+
+}
+
+/* @media(max-width:920px) {
+   .community-video__video video{
+      max-width: 100%;
+   }
+      .community__container{
+flex-wrap: wrap;
+      }
+
+} */
+
+@media(max-width:920px) {
+   .main__community {
+      padding: 80px 0 80px;
+   }
+      .community__text {
+         margin-bottom: 20px;
+      }
+}
+
+@media(max-width:770px) {
+   .community__container {
+      flex-wrap: wrap;
+      justify-content: center;
+   }
+
+   .community__text {
+      max-width: 100%;
+   }
+
+   .community__content {
+      margin-bottom: 30px;
+   }
+
+
+}
+
+@media(max-width:479.98px) {
+   .main__community {
+      padding: 50px 0 50px;
+   }
+
+   .community__content {
+      margin-bottom: 20px;
+   }
+
 }
